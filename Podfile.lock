@@ -1,0 +1,101 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - ARChromeActivity (1.0.5)
+  - BaiduMapKit (4.3.0)
+  - BMKLocationKit (1.4.0)
+  - CYLTabBarController (1.13.2)
+  - DZNEmptyDataSet (1.8.1)
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (3.3.7)
+  - KINWebBrowser (1.3.2):
+    - ARChromeActivity (= 1.0.5)
+    - TUSafariActivity (= 1.0.4)
+  - libqrencode (3.4.2)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.4):
+    - SDWebImage/Core (= 4.4.4)
+  - SDWebImage/Core (4.4.4)
+  - SVProgressHUD (2.2.5)
+  - TUSafariActivity (1.0.4)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - BaiduMapKit
+  - BMKLocationKit
+  - CYLTabBarController (~> 1.13.1)
+  - DZNEmptyDataSet
+  - FDFullscreenPopGesture (= 1.1)
+  - IQKeyboardManager (~> 3.3.4)
+  - KINWebBrowser
+  - libqrencode
+  - Masonry
+  - MJRefresh
+  - SDCycleScrollView (~> 1.64)
+  - SDWebImage
+  - SVProgressHUD
+  - "UITableView+FDTemplateLayoutCell (~> 1.6.beta)"
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - ARChromeActivity
+    - BaiduMapKit
+    - BMKLocationKit
+    - CYLTabBarController
+    - DZNEmptyDataSet
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - KINWebBrowser
+    - libqrencode
+    - Masonry
+    - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - TUSafariActivity
+    - "UITableView+FDTemplateLayoutCell"
+    - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ARChromeActivity: 821c7849b566f49583987468733a896fee35aa4d
+  BaiduMapKit: 63575d9236b4112c4ff76391df637f2a6dc1ada8
+  BMKLocationKit: ca1343eea19b2f2e999d1ad51bd6a1f1220f3456
+  CYLTabBarController: 1ea13266ead94d45427c9d7ff8fa6e06d6835d23
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
+  libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 4293f44dc10dc762cc2261c66c019ca1e82121fb
+
+COCOAPODS: 1.5.3
