@@ -20,7 +20,7 @@
 #import <AlipaySDK/AlipaySDK.h>
 #import "paySelectControl.h"
 
-#define MyOrderCellHeight       200
+#define MyOrderCellHeight       196
 
 #define MyOrderCellXibName          @"MyOrderCell"
 #define MyToBePayCellXibName        @"MyToBePayCell"
@@ -54,6 +54,7 @@
     }
     
     self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.separatorStyle = NO;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.tableView.mj_footer.hidden = YES;

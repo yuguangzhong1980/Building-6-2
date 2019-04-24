@@ -198,7 +198,7 @@ static UITextField *txzw;
         self.authcationLabel.textColor=[UIColor colorWithRed:198/255.0 green:198/255.0 blue:198/255.0 alpha:1];
         self.authcationLabel.layer.borderColor=([UIColor colorWithRed:198/255.0 green:198/255.0 blue:198/255.0 alpha:1].CGColor);
 
-        [self theaddConfig];
+        [self theHouseFlash];
 
         self.confirmBtn.alpha=0;
         self.nameFiled.enabled = NO;
@@ -213,32 +213,7 @@ static UITextField *txzw;
         self.authcationLabel.textColor=[UIColor colorWithRed:154/255.0 green:204/255.0 blue:255/255.0 alpha:1];
         self.authcationLabel.layer.borderColor=([UIColor colorWithRed:154/255.0 green:204/255.0 blue:255/255.0 alpha:1].CGColor);
         
-        //房间列表
-        float x=0;
-        float y=_l6View.frame.origin.y + _l6View.frame.size.height;
-        float w = ScreenWidth;
-        float h = 58 * self.model.selectedHouse.count+1;
-        [lui removeFromSuperview];
-        CGSize size = CGSizeMake(w, h);
-        lui = [[UIView alloc]initWithFrame:CGRectMake( x, y, size.width, size.height )];
-        
-        if( self.model.selectedHouse.count > 0)
-        {
-            int i=0;
-            for (selectedHouseModel *sh in self.model.selectedHouse)
-            {
-                y = i*58 + 10;
-                self.houseId=[sh.houseId integerValue];
-                [self.idArray addObject:@(self.houseId)];
-                [self.nameArray addObject:sh.title];
-                [self ConfigHouselabel:sh.title startx:(x+24) starty:y ];
-                i++;
-            }
-        }
-        [self.i00View addSubview:lui ];
-        [self lineView:lui ];
-        [self companyView:lineview];
-
+        [self theHouseFlash];
         
         self.confirmBtn.alpha=0;
         self.buildingNoMenu.userInteractionEnabled = NO;
@@ -307,10 +282,35 @@ static UITextField *txzw;
     [self.i00View addSubview:lui ];
     [self lineView:lui ];
     [self companyView:lineview];
-    
-
 }
 
+-(void)theHouseFlash{
+    //房间列表
+    float x=0;
+    float y=_l6View.frame.origin.y + _l6View.frame.size.height;
+    float w = ScreenWidth;
+    float h = 58 * self.model.selectedHouse.count+1;
+    [lui removeFromSuperview];
+    CGSize size = CGSizeMake(w, h);
+    lui = [[UIView alloc]initWithFrame:CGRectMake( x, y, size.width, size.height )];
+    
+    if( self.model.selectedHouse.count > 0)
+    {
+        int i=0;
+        for (selectedHouseModel *sh in self.model.selectedHouse)
+        {
+            y = i*58 + 10;
+            self.houseId=[sh.houseId integerValue];
+            [self.idArray addObject:@(self.houseId)];
+            [self.nameArray addObject:sh.title];
+            [self ConfigHouselabel:sh.title startx:(x+24) starty:y ];
+            i++;
+        }
+    }
+    [self.i00View addSubview:lui ];
+    [self lineView:lui ];
+    [self companyView:lineview];
+}
 
 - (void) handleBackgroundTap:(UITapGestureRecognizer*)sender
 {

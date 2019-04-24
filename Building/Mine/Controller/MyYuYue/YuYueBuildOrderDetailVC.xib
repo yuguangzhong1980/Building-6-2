@@ -114,7 +114,7 @@
                                             <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_icon_map_2" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-oh-Xrf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_icon_map_1" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-oh-Xrf">
                                             <rect key="frame" x="146" y="59" width="12" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="12" id="8KI-4w-MAe"/>
@@ -361,6 +361,6 @@
         </view>
     </objects>
     <resources>
-        <image name="list_icon_map_2" width="12" height="12"/>
+        <image name="list_icon_map_1" width="12" height="12"/>
     </resources>
 </document>

@@ -70,6 +70,7 @@
     //self.tableView.frame = CGRectMake(0,0,ScreenWidth, ScreenHeight);
     //self.tableView.backgroundColor = [UIColor redColor];
     //return;
+    //NSLog(@"HouseResourceViewController");
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (@available(iOS 11.0, *)) {
         self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -116,6 +117,8 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 1;
         self.tableView.mj_footer.hidden = YES;
+        //NSLog(@"gainHouseResourceListWithRefresh");
+
         [self gainHouseResourceListWithRefresh:YES];
     }];
     //上拉加载
@@ -129,7 +132,8 @@
     [self gainBannerData];
     [self gainCityList];
     [self gainCityShangQuanALL];
-    
+    //NSLog(@"gainCityShangQuanALL");
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -158,36 +162,47 @@
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     if (self.rentRange != -1) {
         [params setObject:@(self.rentRange) forKey:@"rentRange"];
+        //NSLog(@"rentRange:%ld", self.rentRange );
     }
     if (self.pageSize != -1) {
         [params setObject:@(self.pageSize) forKey:@"pageSize"];
+        //NSLog(@"pageSize:%ld", self.pageSize );
     }
     if (self.page != -1) {
         [params setObject:@(self.page) forKey:@"page"];
+        //NSLog(@"page:%ld", self.page );
     }
     if (self.houseTypeId != -1) {
         [params setObject:@(self.houseTypeId) forKey:@"houseTypeId"];
+        //NSLog(@"houseTypeId:%ld", self.houseTypeId );
     }
     if (self.countyId != nil) {
         [params setObject:self.countyId forKey:@"countyId"];
+        //NSLog(@"houseTypeId:%@", self.countyId );
     }
     if (self.cityId != -1) {
         [params setObject:@(self.cityId) forKey:@"cityId"];
+        //NSLog(@"cityId:%ld", self.cityId );
     }
     if (self.tradingId != -1) {
         [params setObject:@(self.tradingId) forKey:@"tradingId"];
+        //NSLog(@"tradingId:%ld", self.tradingId );
     }
     if (self.buildId != -1) {
         [params setObject:@(self.buildId) forKey:@"buildId"];
+        //NSLog(@"buildId:%ld", self.buildId );
     }
     if (self.keyWord != nil) {
         [params setObject:self.keyWord forKey:@"keyWord"];
+        //NSLog(@"keyWord:%@", self.keyWord );
     }
     if (self.metro != nil) {
         [params setObject:self.metro forKey:@"metro"];
+        //NSLog(@"metro:%@", self.metro );
     }
     if (self.sort != nil) {
         [params setObject:self.sort forKey:@"sort"];
+        //NSLog(@"sort:%@", self.sort );
     }
     
     __weak __typeof__ (self) wself = self;

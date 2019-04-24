@@ -270,6 +270,7 @@
             [weakSelf.choiceFYModelArr removeAllObjects];
             for (int i=0; i < countMy; i++) {
                 HouseServiceModel *item = serviceInfo.houseServiceList[i];
+                NSLog(@"HouseServiceModel:%@", item.name);
                 [weakSelf.choiceFYModelArr addObject:item];
             }
             
@@ -282,6 +283,7 @@
             [weakSelf.choiceLYModelArr removeAllObjects];
             for (int i=0; i < countMy; i++) {
                 ServiceItemModel *item = serviceInfo.buildServiceList[i];
+                NSLog(@"ServiceItemModel:%@", item.name);
                 [weakSelf.choiceLYModelArr addObject:item];
             }
             weakSelf.choiceLYTableViewHeight.constant = countMy * HomeServiceCellHeight;
@@ -293,6 +295,7 @@
             [weakSelf.choiceQYModelArr removeAllObjects];
             for (int i=0; i < countMy; i++) {
                 ServiceItemModel *item = serviceInfo.corpServiceList[i];
+                NSLog(@"ServiceItemModel:%@", item.name);
                 [weakSelf.choiceQYModelArr addObject:item];
             }
             weakSelf.choiceQYTableViewHeight.constant = countMy * HomeServiceCellHeight;

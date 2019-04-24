@@ -12,6 +12,7 @@
 //城市、商圈基础数据查询
 + (void)getHomeCityShangQuanListSuccess:(void(^)(NSArray *citys))success failure:(void(^)(id response))failure {
     NSString *url = [NSString stringWithFormat:@"%@/home/basicData",BasicUrl];
+    NSMutableDictionary* headerParams = [[NSMutableDictionary alloc] init];
     [QSNetworking getWithUrl:url success:^(id response) {
         if ([[response objectForKey:@"code"] integerValue] == 200) {
             NSArray * articleArr = [NSArray yy_modelArrayWithClass:[FYShangQuanCityModel class] json:[response objectForKey:@"result"]];
@@ -49,9 +50,14 @@
 
 //获取房源列表
 + (void)gainHouseResourceListWithParams:(NSMutableDictionary *)params Success:(void(^)(id response))success failure:(void(^)(id response))failure {
-    
     NSString *url = [NSString stringWithFormat:@"%@/house/list",BasicUrl];
-    [QSNetworking postWithUrl:url params:params success:^(NSDictionary * response) {
+    
+    NSMutableDictionary* headerParams = [[NSMutableDictionary alloc] init];
+    if( [GlobalConfigClass shareMySingle].userAndTokenModel.token != nil )
+    {
+        [headerParams setObject:[GlobalConfigClass shareMySingle].userAndTokenModel.token forKey:@"token"];
+    }
+    [QSNetworking postWithUrl:url params:params headerParams:headerParams  success:^(NSDictionary * response) {
         NSDictionary *dict = (NSDictionary *)response;
         if ([[response objectForKey:@"code"] integerValue] == 200){
             FYItemListModel *serviceInfo = [FYItemListModel yy_modelWithJSON:[response objectForKey:@"result"]];
